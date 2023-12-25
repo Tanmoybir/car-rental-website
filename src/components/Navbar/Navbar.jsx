@@ -5,7 +5,6 @@ import { useTheme } from "../../hooks/useTheme";
 const Navbar = () => {
     const {themeChanced, mode} = useTheme()
 
-
     const navLinks = [
         {
             id: 1,
@@ -46,7 +45,7 @@ const Navbar = () => {
                                             to={data.link}
                                             className={({ isActive, isPending }) =>
                                                 isPending ? "pending" : isActive ?
-                                                    "py-2 border-b-2 text-blue-00 border-blue-200 transition-colors duration-500 text-lg font-medium" :
+                                                    "py-2 border-b-2 text-yellow-300 border-yellow-300 transition-colors duration-500 text-lg font-medium" :
                                                     "py-2 hover:border-b-2 hover:text-yellow-200 hover:border-yellow-200 transition-colors duration-500 text-lg font-medium"
                                             }
                                         >
@@ -57,7 +56,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    {/* Mood */}
+                    {/* Mode */}
                     <div className="" onClick={themeChanced}>
                     {
                         mode === 'dark'? <IoMdSunny/> : <IoMdMoon/>
